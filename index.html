@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGNEXUS | Soluciones Tecnológicas Empresariales en Quito</title>
+  <meta name="description" content="AGNEXUS en Quito, Ecuador. Implementamos soluciones tecnológicas empresariales para pymes: redes empresariales, telefonía IP/PBX, WiFi profesional, cableado estructurado y monitoreo IoT/LoRaWAN." />
+  <meta name="keywords" content="redes empresariales Quito, telefonía IP Quito, PBX Quito, WiFi empresarial Quito, cableado estructurado Quito, LoRaWAN Ecuador, IoT empresarial Quito, soluciones tecnológicas pymes Ecuador" />
+  <meta name="author" content="AGNEXUS" />
+  <meta property="og:title" content="AGNEXUS | Soluciones Tecnológicas Empresariales" />
+  <meta property="og:description" content="Conectividad, comunicación y control operativo para pymes en Quito." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_EC" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-2:#0c1830;
+      --card:#0f1e38;
+      --card-2:#122646;
+      --line:rgba(255,255,255,.08);
+      --text:#e8eefc;
+      --muted:#9fb0d1;
+      --primary:#2dd4bf;
+      --primary-2:#14b8a6;
+      --accent:#60a5fa;
+      --warning:#f59e0b;
+      --success:#22c55e;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius-lg:24px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(45,212,191,.08), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(96,165,250,.08), transparent 25%),
+        linear-gradient(180deg, #07111f 0%, #0a1427 100%);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%}
+    .container{width:min(92%, var(--max));margin:auto}
+    .section{padding:88px 0}
+    .grid{display:grid;gap:24px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px;
+      border:1px solid transparent;cursor:pointer;transition:.25s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#04211d;box-shadow:0 10px 30px rgba(45,212,191,.25);
+    }
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    .btn-secondary{
+      background:rgba(255,255,255,.04);border-color:var(--line);color:var(--text);
+    }
+    .btn-secondary:hover{background:rgba(255,255,255,.07)}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      background:rgba(45,212,191,.08);
+      color:var(--primary);
+      border:1px solid rgba(45,212,191,.18);
+      font-size:13px;font-weight:700;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:1000;
+      backdrop-filter: blur(16px);
+      background:rgba(7,17,31,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-wrap{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:16px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px;letter-spacing:.5px;
+    }
+    .brand-logo{
+      width:42px;height:42px;border-radius:14px;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      display:grid;place-items:center;color:#04111e;font-weight:900;
+      box-shadow:0 10px 30px rgba(45,212,191,.2);
+    }
+    .nav-links{
+      display:flex;align-items:center;gap:20px;
+    }
+    .nav-links a{
+      color:var(--muted);font-weight:600;font-size:14px;
+    }
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{display:flex;gap:12px}
+    .menu-toggle{
+      display:none;background:none;border:none;color:var(--text);font-size:28px;cursor:pointer;
+    }
+
+    /* HERO */
+    .hero{
+      padding:72px 0 56px;
+      position:relative;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:34px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:clamp(34px, 6vw, 64px);
+      line-height:1.05;
+      margin:18px 0 18px;
+      font-weight:900;
+      letter-spacing:-1.4px;
+    }
+    .hero p{
+      color:var(--muted);
+      font-size:clamp(16px,2vw,20px);
+      max-width:720px;
+    }
+    .hero-actions{
+      display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;
+    }
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+    .mini-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+    }
+    .mini-card strong{display:block;font-size:15px;margin-bottom:6px}
+    .mini-card span{font-size:13px;color:var(--muted)}
+
+    .hero-card{
+      background:linear-gradient(180deg, rgba(18,38,70,.95), rgba(10,20,39,.95));
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      padding:26px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;inset:-1px;
+      background:linear-gradient(135deg, rgba(45,212,191,.18), rgba(96,165,250,.08), transparent 60%);
+      pointer-events:none;
+    }
+    .dashboard{
+      display:grid;gap:14px;position:relative;z-index:1;
+    }
+    .dash-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    }
+    .dash-box{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+    .dash-box h4{font-size:14px;color:var(--muted);margin-bottom:8px}
+    .dash-value{font-size:26px;font-weight:900}
+    .dash-full{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+    }
+    .signal-bars{
+      display:flex;align-items:flex-end;gap:8px;height:80px;margin-top:12px;
+    }
+    .signal-bars span{
+      flex:1;border-radius:10px 10px 4px 4px;
+      background:linear-gradient(180deg,var(--primary),var(--accent));
+      opacity:.9;
+    }
+    .signal-bars span:nth-child(1){height:30%}
+    .signal-bars span:nth-child(2){height:50%}
+    .signal-bars span:nth-child(3){height:72%}
+    .signal-bars span:nth-child(4){height:90%}
+    .signal-bars span:nth-child(5){height:65%}
+
+    /* TRUST */
+    .trust{
+      padding:22px 0 10px;
+    }
+    .trust-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .trust-item{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      text-align:center;
+    }
+    .trust-item strong{display:block;font-size:20px}
+    .trust-item span{color:var(--muted);font-size:13px}
+
+    /* SECTION TITLES */
+    .section-head{
+      text-align:center;
+      max-width:840px;
+      margin:0 auto 42px;
+    }
+    .section-head h2{
+      font-size:clamp(28px,4vw,46px);
+      line-height:1.08;
+      margin:14px 0;
+      font-weight:900;
+      letter-spacing:-.8px;
+    }
+    .section-head p{
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    /* PROBLEMS */
+    .problem-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .problem-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    .problem-icon{
+      width:48px;height:48px;border-radius:14px;
+      display:grid;place-items:center;
+      background:rgba(245,158,11,.12);
+      color:var(--warning);
+      margin-bottom:14px;
+      font-size:22px;
+    }
+    .problem-card h3{font-size:18px;margin-bottom:8px}
+    .problem-card p{color:var(--muted);font-size:15px}
+
+    /* SERVICES */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+    .service-card{
+      background:linear-gradient(180deg, rgba(18,38,70,.9), rgba(12,24,48,.9));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .service-card::after{
+      content:"";
+      position:absolute;top:0;right:0;width:120px;height:120px;
+      background:radial-gradient(circle, rgba(45,212,191,.12), transparent 70%);
+    }
+    .service-top{
+      display:flex;align-items:center;gap:14px;margin-bottom:14px;
+    }
+    .service-icon{
+      width:54px;height:54px;border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(45,212,191,.08);
+      border:1px solid rgba(45,212,191,.15);
+      color:var(--primary);
+      font-size:24px;
+      flex-shrink:0;
+    }
+    .service-card h3{font-size:22px}
+    .service-card p{color:var(--muted);margin-bottom:16px}
+    .service-list{list-style:none;display:grid;gap:10px}
+    .service-list li{
+      display:flex;gap:10px;align-items:flex-start;
+      color:#d7e2fb;font-size:14px;
+    }
+    .service-list li::before{
+      content:"✔";
+      color:var(--success);
+      font-weight:900;
+      margin-top:1px;
+    }
+
+    /* DIFFERENTIATORS */
+    .diff-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      align-items:start;
+    }
+    .compare-card{
+      border-radius:22px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+    }
+    .compare-head{
+      padding:18px 22px;
+      font-weight:800;
+      border-bottom:1px solid var(--line);
+      font-size:18px;
+    }
+    .compare-head.common{background:rgba(245,158,11,.08);color:#ffd89a}
+    .compare-head.agnexus{background:rgba(45,212,191,.08);color:#a9fff1}
+    .compare-list{
+      list-style:none;
+    }
+    .compare-list li{
+      padding:16px 22px;
+      border-bottom:1px solid var(--line);
+      color:var(--muted);
+      font-size:15px;
+    }
+    .compare-list li:last-child{border-bottom:none}
+    .compare-list strong{color:var(--text)}
+
+    /* OFFER */
+    .offer{
+      background:linear-gradient(135deg, rgba(45,212,191,.12), rgba(96,165,250,.08));
+      border:1px solid rgba(45,212,191,.16);
+      border-radius:28px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+    .offer-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:26px;
+      align-items:center;
+    }
+    .offer h2{
+      font-size:clamp(28px,4vw,42px);
+      line-height:1.08;
+      margin:12px 0 14px;
+      font-weight:900;
+    }
+    .offer p{color:#d7e2fb}
+    .offer-list{
+      list-style:none;display:grid;gap:12px;margin-top:18px;
+    }
+    .offer-list li{
+      display:flex;gap:10px;align-items:flex-start;
+      font-size:15px;
+    }
+    .offer-list li::before{
+      content:"✓";
+      color:var(--primary);
+      font-weight:900;
+    }
+    .offer-card{
+      background:rgba(7,17,31,.55);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
+    }
+    .price-badge{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(34,197,94,.12);
+      color:#9ff2b7;
+      border:1px solid rgba(34,197,94,.2);
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+    .offer-card h3{font-size:22px;margin-bottom:8px}
+    .offer-card p{color:var(--muted);font-size:14px;margin-bottom:18px}
+
+    /* TESTIMONIALS */
+    .testimonials-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .testimonial{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+    }
+    .stars{color:#fbbf24;font-size:18px;margin-bottom:12px}
+    .testimonial p{color:#d7e2fb;font-size:15px;margin-bottom:16px}
+    .person{
+      display:flex;gap:12px;align-items:center;
+    }
+    .avatar{
+      width:46px;height:46px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      display:grid;place-items:center;color:#07111f;font-weight:900;
+    }
+    .person strong{display:block}
+    .person span{color:var(--muted);font-size:13px}
+
+    /* FAQ */
+    .faq-list{
+      display:grid;gap:14px;max-width:900px;margin:0 auto;
+    }
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+    }
+    .faq-question{
+      width:100%;
+      text-align:left;
+      padding:18px 20px;
+      background:none;border:none;color:var(--text);
+      font-size:16px;font-weight:800;cursor:pointer;
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .faq-answer{
+      max-height:0;overflow:hidden;
+      transition:max-height .3s ease;
+      padding:0 20px;
+    }
+    .faq-answer p{
+      padding:0 0 18px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* LEAD FORM */
+    .lead-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .lead-info, .lead-form{
+      background:linear-gradient(180deg, rgba(18,38,70,.9), rgba(12,24,48,.9));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+    }
+    .lead-info h3, .lead-form h3{
+      font-size:28px;
+      line-height:1.1;
+      margin-bottom:12px;
+    }
+    .lead-info p, .lead-form p{color:var(--muted);margin-bottom:20px}
+    .contact-list{
+      list-style:none;display:grid;gap:14px;margin-top:14px;
+    }
+    .contact-list li{
+      display:flex;gap:12px;align-items:flex-start;
+      color:#d7e2fb;
+    }
+    .contact-list span{
+      width:40px;height:40px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(45,212,191,.08);
+      color:var(--primary);
+      border:1px solid rgba(45,212,191,.16);
+      flex-shrink:0;
+    }
+
+    form{display:grid;gap:14px}
+    .field{
+      display:grid;gap:8px;
+    }
+    label{
+      font-size:14px;font-weight:700;color:#dce7ff;
+    }
+    input, textarea, select{
+      width:100%;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--text);
+      border-radius:14px;
+      padding:14px 14px;
+      outline:none;
+      font-size:15px;
+    }
+    input:focus, textarea:focus, select:focus{
+      border-color:rgba(45,212,191,.4);
+      box-shadow:0 0 0 4px rgba(45,212,191,.08);
+    }
+    textarea{min-height:120px;resize:vertical}
+    .form-note{
+      font-size:13px;color:var(--muted);
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .footer-wrap{
+      display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    }
+
+    /* FLOATING WHATSAPP */
+    .wa-float{
+      position:fixed;
+      right:18px;bottom:18px;z-index:999;
+      width:62px;height:62px;border-radius:50%;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,#25d366,#1fa855);
+      color:#fff;font-size:28px;font-weight:900;
+      box-shadow:0 12px 30px rgba(37,211,102,.35);
+      transition:.25s ease;
+    }
+    .wa-float:hover{transform:translateY(-3px) scale(1.03)}
+
+    /* REVEAL */
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:all .7s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px){
+      .hero-grid,
+      .offer-grid,
+      .lead-wrap,
+      .diff-wrap{
+        grid-template-columns:1fr;
+      }
+      .hero-points,
+      .trust-strip,
+      .problem-grid,
+      .testimonials-grid,
+      .services-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px){
+      .nav-links,
+      .nav-cta{
+        display:none;
+      }
+      .menu-toggle{display:block}
+      .mobile-menu{
+        display:none;
+        padding:12px 0 18px;
+        border-top:1px solid var(--line);
+      }
+      .mobile-menu.active{display:grid;gap:12px}
+      .mobile-menu a{
+        color:var(--muted);font-weight:700;
+      }
+      .hero{
+        padding-top:40px;
+      }
+      .hero-points,
+      .trust-strip,
+      .problem-grid,
+      .services-grid,
+      .testimonials-grid{
+        grid-template-columns:1fr;
+      }
+      .dash-row{
+        grid-template-columns:1fr;
+      }
+      .section{
+        padding:72px 0;
+      }
+      .offer, .lead-info, .lead-form{
+        padding:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="#" class="brand">
+          <div class="brand-logo">AG</div>
+          <span>AGNEXUS</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#diferenciadores">Diferenciadores</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="mailto:agnexus88@gmail.com">Correo</a>
+          <a class="btn btn-primary" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20una%20asesor%C3%ADa%20tecnol%C3%B3gica%20para%20mi%20empresa" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#servicios">Servicios</a>
+        <a href="#diferenciadores">Diferenciadores</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn-primary" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20una%20asesor%C3%ADa%20tecnol%C3%B3gica%20para%20mi%20empresa" target="_blank">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="badge">Soluciones tecnológicas empresariales en Quito</span>
+          <h1>Tu empresa no necesita “arreglos”.<br>Necesita una infraestructura tecnológica que sí funcione.</h1>
+          <p>
+            <strong>Implementamos soluciones tecnológicas empresariales que mejoran la conectividad, la comunicación y el control operativo de tu negocio.</strong>
+            Diseñamos e integramos redes, telefonía IP, WiFi profesional, cableado estructurado y monitoreo IoT/LoRaWAN para pymes que quieren operar con estabilidad, imagen profesional y capacidad de crecimiento.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20una%20evaluaci%C3%B3n%20tecnol%C3%B3gica%20para%20mi%20empresa" target="_blank">
+              Solicitar diagnóstico por WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#contacto">Quiero una propuesta</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="mini-card">
+              <strong>Más estabilidad</strong>
+              <span>Menos caídas, menos interrupciones y menos pérdidas de tiempo.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Más control</strong>
+              <span>Visibilidad operativa con infraestructura pensada para crecer.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Más imagen</strong>
+              <span>Una solución empresarial, no una instalación improvisada.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="dashboard">
+            <div class="dash-row">
+              <div class="dash-box">
+                <h4>Disponibilidad de red</h4>
+                <div class="dash-value">99.9%</div>
+              </div>
+              <div class="dash-box">
+                <h4>Comunicaciones internas</h4>
+                <div class="dash-value">Centralizadas</div>
+              </div>
+            </div>
+            <div class="dash-full">
+              <h4>Rendimiento WiFi empresarial</h4>
+              <div class="signal-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="dash-row">
+              <div class="dash-box">
+                <h4>Monitoreo IoT</h4>
+                <div class="dash-value">24/7</div>
+              </div>
+              <div class="dash-box">
+                <h4>Escalabilidad</h4>
+                <div class="dash-value">Modular</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trust reveal trust">
+        <div class="trust-strip">
+          <div class="trust-item">
+            <strong>Redes empresariales</strong>
+            <span>Infraestructura estable y escalable</span>
+          </div>
+          <div class="trust-item">
+            <strong>Telefonía IP / PBX</strong>
+            <span>Comunicación profesional y ordenada</span>
+          </div>
+          <div class="trust-item">
+            <strong>WiFi profesional</strong>
+            <span>Cobertura real, no “más routers”</span>
+          </div>
+          <div class="trust-item">
+            <strong>IoT / LoRaWAN</strong>
+            <span>Monitoreo operativo y automatización</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">Problemas que resolvemos</span>
+        <h2>Si tu operación depende de la tecnología, no puedes dejarla en manos improvisadas</h2>
+        <p>
+          Muchas pymes pierden productividad, clientes y control porque su infraestructura fue instalada “para salir del paso”.
+          AGNEXUS diseña soluciones con criterio empresarial: rendimiento, orden, continuidad y crecimiento.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div class="problem-icon">📶</div>
+          <h3>WiFi inestable o zonas muertas</h3>
+          <p>Señal débil, equipos saturados y cobertura mal diseñada que afecta ventas, atención y productividad.</p>
+        </div>
+
+        <div class="problem-card reveal">
+          <div class="problem-icon">☎️</div>
+          <h3>Comunicación interna desordenada</h3>
+          <p>Llamadas perdidas, extensiones inexistentes, mala atención y falta de control sobre el flujo de comunicación.</p>
+        </div>
+
+        <div class="problem-card reveal">
+          <div class="problem-icon">🔌</div>
+          <h3>Infraestructura improvisada</h3>
+          <p>Cableado sin norma, switches mal dimensionados y equipos conectados sin arquitectura ni visión de crecimiento.</p>
+        </div>
+
+        <div class="problem-card reveal">
+          <div class="problem-icon">📡</div>
+          <h3>Sin monitoreo operativo</h3>
+          <p>No saber qué ocurre con temperatura, humedad, activos o variables críticas hasta que ya hay pérdidas.</p>
+        </div>
+
+        <div class="problem-card reveal">
+          <div class="problem-icon">📉</div>
+          <h3>Costos ocultos por fallas</h3>
+          <p>Tiempo muerto, mala atención al cliente, retrabajos y dependencia de soporte reactivo en lugar de prevención.</p>
+        </div>
+
+        <div class="problem-card reveal">
+          <div class="problem-icon">🏢</div>
+          <h3>Imagen poco profesional</h3>
+          <p>Una empresa con infraestructura deficiente transmite desorden, limita su crecimiento y genera riesgos operativos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">Servicios principales</span>
+        <h2>Una solución integral para conectividad, comunicación y control</h2>
+        <p>
+          No vendemos “equipos sueltos”. Diseñamos e implementamos soluciones tecnológicas alineadas a la operación real de tu pyme.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-top">
+            <div class="service-icon">🌐</div>
+            <h3>Redes empresariales</h3>
+          </div>
+          <p>Diseño, segmentación, optimización y estabilidad para que tu empresa opere sin interrupciones.</p>
+          <ul class="service-list">
+            <li>Arquitectura de red para oficinas, locales y pymes</li>
+            <li>Segmentación y ordenamiento de dispositivos</li>
+            <li>Optimización de rendimiento y reducción de cuellos de botella</li>
+            <li>Infraestructura lista para crecimiento futuro</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-top">
+            <div class="service-icon">📞</div>
+            <h3>Telefonía IP / PBX</h3>
+          </div>
+          <p>Centraliza la comunicación interna y proyecta una imagen más profesional frente a tus clientes.</p>
+          <ul class="service-list">
+            <li>Extensiones internas y flujo de llamadas</li>
+            <li>PBX empresarial adaptable a tu tamaño</li>
+            <li>Mejor control de llamadas y atención</li>
+            <li>Escalabilidad para nuevas áreas o sedes</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-top">
+            <div class="service-icon">📡</div>
+            <h3>WiFi profesional</h3>
+          </div>
+          <p>Cobertura real, capacidad adecuada y experiencia estable para personal, clientes y operaciones críticas.</p>
+          <ul class="service-list">
+            <li>Diseño por cobertura y densidad de usuarios</li>
+            <li>Eliminación de zonas muertas</li>
+            <li>Separación de redes internas e invitados</li>
+            <li>Más estabilidad que soluciones domésticas</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-top">
+            <div class="service-icon">🧰</div>
+            <h3>Cableado estructurado</h3>
+          </div>
+          <p>Base física ordenada y profesional para soportar datos, voz y crecimiento sin improvisaciones.</p>
+          <ul class="service-list">
+            <li>Organización y etiquetado técnico</li>
+            <li>Buenas prácticas de instalación</li>
+            <li>Mayor facilidad de mantenimiento</li>
+            <li>Infraestructura limpia y escalable</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" style="grid-column: 1 / -1;">
+          <div class="service-top">
+            <div class="service-icon">📈</div>
+            <h3>Monitoreo IoT / LoRaWAN</h3>
+          </div>
+          <p>
+            Lleva tu empresa a un nivel superior con monitoreo inteligente de variables críticas y visibilidad operativa en tiempo real.
+          </p>
+          <ul class="service-list">
+            <li>Monitoreo de temperatura, humedad y variables ambientales</li>
+            <li>Seguimiento de activos, espacios o procesos</li>
+            <li>Tecnología LoRaWAN para mayor alcance y eficiencia</li>
+            <li>Datos para tomar decisiones, prevenir pérdidas y automatizar alertas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS -->
+  <section class="section" id="diferenciadores">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">Diferenciador competitivo</span>
+        <h2>AGNEXUS no es “el que instala”. Es el socio tecnológico que estructura tu operación.</h2>
+        <p>
+          La diferencia entre una instalación común y una solución empresarial se nota en la estabilidad, la escalabilidad y el impacto en tu negocio.
+        </p>
+      </div>
+
+      <div class="diff-wrap">
+        <div class="compare-card reveal">
+          <div class="compare-head common">Instalador común</div>
+          <ul class="compare-list">
+            <li><strong>Vende equipos</strong> sin entender la operación real del negocio.</li>
+            <li><strong>Resuelve fallas puntuales</strong>, pero no corrige la causa estructural.</li>
+            <li><strong>Instala por intuición</strong>, sin diseño ni proyección de crecimiento.</li>
+            <li><strong>WiFi “más fuerte”</strong> en lugar de cobertura profesional bien planificada.</li>
+            <li><strong>Telefonía sin estrategia</strong>, solo para “que funcione”.</li>
+            <li><strong>Sin enfoque de continuidad</strong>, orden técnico ni documentación.</li>
+          </ul>
+        </div>
+
+        <div class="compare-card reveal">
+          <div class="compare-head agnexus">AGNEXUS</div>
+          <ul class="compare-list">
+            <li><strong>Diseña soluciones empresariales</strong> alineadas a procesos y crecimiento.</li>
+            <li><strong>Integra conectividad + comunicación + monitoreo</strong> en una sola estrategia.</li>
+            <li><strong>Piensa en estabilidad y escalabilidad</strong>, no solo en instalación inicial.</li>
+            <li><strong>Aplica criterio técnico-profesional</strong> para cobertura, capacidad y orden.</li>
+            <li><strong>Proyecta una imagen corporativa</strong> más seria ante clientes y equipos internos.</li>
+            <li><strong>Reduce riesgos operativos</strong> con infraestructura mejor planificada.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="section">
+    <div class="container">
+      <div class="offer reveal">
+        <div class="offer-grid">
+          <div>
+            <span class="badge">Oferta irresistible de captación</span>
+            <h2>Diagnóstico tecnológico empresarial + ruta de mejora inicial</h2>
+            <p>
+              Ideal para pymes que sospechan que su red, WiFi, telefonía o infraestructura actual les está costando tiempo, clientes o productividad.
+            </p>
+            <ul class="offer-list">
+              <li>Revisión inicial de conectividad, WiFi, cableado o telefonía actual</li>
+              <li>Identificación de riesgos visibles y puntos de mejora prioritarios</li>
+              <li>Recomendaciones concretas orientadas a negocio, no a “comprar por comprar”</li>
+              <li>Enfoque profesional para tomar decisiones con criterio</li>
+            </ul>
+          </div>
+
+          <div class="offer-card">
+            <span class="price-badge">Oferta de entrada para captar leads</span>
+            <h3>Solicita tu evaluación inicial</h3>
+            <p>
+              Conversa con AGNEXUS y recibe una orientación estratégica para definir qué mejorar primero en tu infraestructura tecnológica.
+            </p>
+            <a class="btn btn-primary" style="width:100%;" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20agendar%20mi%20diagn%C3%B3stico%20tecnol%C3%B3gico%20empresarial" target="_blank">
+              Agendar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">Prueba social</span>
+        <h2>Lo que una buena infraestructura cambia en una pyme</h2>
+        <p>
+          Testimonios orientados a credibilidad comercial y percepción de valor empresarial.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Antes teníamos cortes constantes y el WiFi era un problema diario. Con AGNEXUS se notó que no era solo instalar equipos, sino organizar toda la red con visión empresarial.”
+          </p>
+          <div class="person">
+            <div class="avatar">CM</div>
+            <div>
+              <strong>Carolina M.</strong>
+              <span>Administradora de oficina</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            “La telefonía interna mejoró muchísimo. Ahora las llamadas se manejan mejor, la atención es más profesional y tenemos más control sobre la operación.”
+          </p>
+          <div class="person">
+            <div class="avatar">JR</div>
+            <div>
+              <strong>Javier R.</strong>
+              <span>Gerente de pyme comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Nos gustó que hablaron en términos de negocio, no solo técnicos. Se enfocaron en estabilidad, crecimiento y prevención. Eso nos dio mucha confianza.”
+          </p>
+          <div class="person">
+            <div class="avatar">LP</div>
+            <div>
+              <strong>Laura P.</strong>
+              <span>Coordinadora operativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge">Preguntas frecuentes</span>
+        <h2>Respuestas que ayudan a convertir</h2>
+        <p>FAQ diseñado para reducir objeciones comerciales y aumentar la confianza.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            ¿AGNEXUS vende equipos o brinda soluciones integrales?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              AGNEXUS se posiciona como una empresa de soluciones tecnológicas empresariales. El enfoque no es vender equipos aislados, sino diseñar e implementar una solución alineada a la necesidad operativa real de la pyme.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            ¿Atienden solo empresas grandes?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. El foco está en pymes que necesitan operar mejor, proyectar una imagen más profesional y construir una base tecnológica estable para crecer.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            ¿Pueden mejorar una instalación existente sin rehacer todo?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Sí. En muchos casos se puede optimizar lo que ya existe, corregir errores críticos y definir una ruta de mejora progresiva para evitar gastos innecesarios.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            ¿Qué beneficio real aporta una PBX o telefonía IP?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Ordena la comunicación interna, mejora la atención al cliente, permite extensiones, da más control operativo y proyecta una imagen más profesional frente al mercado.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            ¿Qué tipo de negocios se benefician del monitoreo IoT / LoRaWAN?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Empresas que necesitan monitorear variables ambientales, activos, procesos, espacios o condiciones críticas donde la prevención y la trazabilidad generan valor operativo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / LEAD -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="lead-wrap">
+        <div class="lead-info reveal">
+          <span class="badge">Contáctanos</span>
+          <h3>Conversemos sobre la infraestructura que tu empresa realmente necesita</h3>
+          <p>
+            Si tu pyme necesita mejorar conectividad, comunicación interna o monitoreo, AGNEXUS puede ayudarte a definir una solución más profesional, ordenada y escalable.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span>📱</span>
+              <div>
+                <strong>WhatsApp / Celular</strong><br>
+                <a href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20informaci%C3%B3n%20sobre%20soluciones%20tecnol%C3%B3gicas%20para%20mi%20empresa" target="_blank">+593 99 221 7314</a>
+              </div>
+            </li>
+            <li>
+              <span>✉️</span>
+              <div>
+                <strong>Correo</strong><br>
+                <a href="mailto:agnexus88@gmail.com">agnexus88@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span>📍</span>
+              <div>
+                <strong>Ubicación</strong><br>
+                Quito, Ecuador
+              </div>
+            </li>
+          </ul>
+
+          <div style="margin-top:22px;">
+            <a class="btn btn-primary" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20agendar%20una%20asesor%C3%ADa%20para%20mi%20empresa" target="_blank">
+              Hablar ahora por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="lead-form reveal">
+          <span class="badge">Formulario de leads</span>
+          <h3>Solicita una evaluación inicial</h3>
+          <p>
+            Completa este formulario y te redirigiremos a WhatsApp con tu información precargada para facilitar el contacto.
+          </p>
+
+          <form id="leadForm">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="field">
+              <label for="company">Empresa</label>
+              <input type="text" id="company" placeholder="Nombre de tu empresa" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" placeholder="Tu número de contacto" required />
+            </div>
+
+            <div class="field">
+              <label for="service">Servicio de interés</label>
+              <select id="service" required>
+                <option value="">Selecciona una opción</option>
+                <option>Redes empresariales</option>
+                <option>Telefonía IP / PBX</option>
+                <option>WiFi profesional</option>
+                <option>Cableado estructurado</option>
+                <option>Monitoreo IoT / LoRaWAN</option>
+                <option>Evaluación integral</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Describe brevemente tu necesidad</label>
+              <textarea id="message" placeholder="Ejemplo: tenemos problemas de WiFi en oficina, queremos mejorar red y telefonía..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Enviar y abrir WhatsApp</button>
+            <p class="form-note">*Landing estática: este formulario redirige a WhatsApp con los datos capturados.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="offer reveal">
+        <div class="offer-grid">
+          <div>
+            <span class="badge">Cierre comercial</span>
+            <h2>Tu tecnología debe impulsar tu operación, no frenarla</h2>
+            <p>
+              Si hoy tu empresa tiene fallas de conectividad, comunicación desordenada o cero visibilidad operativa, AGNEXUS puede ayudarte a estructurar una solución con enfoque empresarial.
+            </p>
+          </div>
+          <div class="offer-card">
+            <h3>Da el siguiente paso</h3>
+            <p>Agenda una conversación inicial y detecta qué debes mejorar primero.</p>
+            <a class="btn btn-primary" style="width:100%;" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20mejorar%20la%20infraestructura%20tecnol%C3%B3gica%20de%20mi%20empresa" target="_blank">
+              Solicitar asesoría por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div>
+          <strong style="color:var(--text)">AGNEXUS</strong><br>
+          Soluciones tecnológicas empresariales en Quito, Ecuador.
+        </div>
+        <div>
+          © <span id="year"></span> AGNEXUS. Todos los derechos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/593992217314?text=Hola%20AGNEXUS,%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones%20tecnol%C3%B3gicas%20empresariales" target="_blank" aria-label="WhatsApp">
+    ✆
+  </a>
+
+  <script>
+    // YEAR
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // MOBILE MENU
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+
+    // FAQ
+    document.querySelectorAll(".faq-item").forEach(item => {
+      const btn = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      const symbol = btn.querySelector("span");
+
+      btn.addEventListener("click", () => {
+        const isOpen = answer.style.maxHeight;
+        document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = null);
+        document.querySelectorAll(".faq-question span").forEach(s => s.textContent = "+");
+
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          symbol.textContent = "–";
+        }
+      });
+    });
+
+    // FORM -> WHATSAPP
+    const leadForm = document.getElementById("leadForm");
+
+    leadForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const text = `Hola AGNEXUS, quiero solicitar una evaluación tecnológica para mi empresa.%0A%0A` +
+        `Nombre: ${encodeURIComponent(name)}%0A` +
+        `Empresa: ${encodeURIComponent(company)}%0A` +
+        `Teléfono: ${encodeURIComponent(phone)}%0A` +
+        `Servicio de interés: ${encodeURIComponent(service)}%0A` +
+        `Necesidad: ${encodeURIComponent(message || "No especificada")}`;
+
+      const waUrl = `https://wa.me/593992217314?text=${text}`;
+      window.open(waUrl, "_blank");
+    });
+
+    // REVEAL ON SCROLL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
