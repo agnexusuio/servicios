@@ -20,7 +20,7 @@
     <meta name="twitter:description"
         content="Soluciones completas de conectividad, telefonía IP, WiFi profesional y monitoreo IoT para empresas en Quito. Expertos en infraestructura tecnológica.">
     <meta name="twitter:image" content="https://www.agnexusuio.com/">
-    <meta name="theme-color" content="#d1d5db">
+    <meta name="theme-color" content="#071827">
     <style>
         * {
             margin: 0;
@@ -29,45 +29,46 @@
         }
 
         :root {
-            --primary: #f0f0f0;
-            --primary-dark: #d1d5db;
-            --secondary: #4b5563;
-            --secondary-light: #6b7280;
-            --accent: #059669;
-            --accent-light: #10b981;
-            --light-bg: #f9fafb;
-            --light-bg-alt: #e5e7eb;
-            --text-dark: #1f2937;
+            --primary: #f2f6fb;
+            --primary-dark: #071827;
+            --secondary: #0d4f8b;
+            --secondary-light: #1975b8;
+            --accent: #1f77b4;
+            --accent-light: #4aa0e0;
+            --light-bg: #ffffff;
+            --light-bg-alt: #eef4fb;
+            --text-dark: #0f172a;
             --text-gray: #4b5563;
-            --text-gray-light: #6b7280;
-            --border: #d1d5db;
-            --border-light: #e5e7eb;
-            --success: #059669;
-            --success-light: #10b981;
-            --shadow: rgba(0, 0, 0, 0.1);
-            --shadow-light: rgba(0, 0, 0, 0.05);
+            --text-gray-light: #718096;
+            --border: #d9e2ec;
+            --border-light: #e2e8f0;
+            --success: #0f6f9d;
+            --success-light: #3aa0d9;
+            --shadow: rgba(15, 23, 42, 0.12);
+            --shadow-light: rgba(15, 23, 42, 0.06);
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background: var(--primary);
+            background: linear-gradient(180deg, #f6f9fd 0%, #eef4fb 100%);
             overflow-x: hidden;
         }
 
         /* Header */
         header {
-            background: var(--primary);
-            color: var(--text-dark);
-            padding: 1.5rem 2rem;
+            background: rgba(7, 24, 39, 0.98);
+            color: #ffffff;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
         }
 
         .logo {
@@ -75,7 +76,7 @@
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
-            color: var(--text-dark);
+            color: #ffffff;
         }
 
         .logo:hover {
@@ -100,70 +101,70 @@
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.5px;
-            color: var(--text-dark);
+            color: currentColor;
         }
 
         .logo-subtitle {
             font-size: 0.65rem;
             letter-spacing: 1px;
-            color: var(--text-gray);
+            color: rgba(255, 255, 255, 0.75);
             text-transform: uppercase;
             font-weight: 500;
         }
 
         .cta-header {
             display: flex;
-            gap: 1rem;
+            gap: 0.85rem;
             align-items: center;
         }
 
         .cta-header a {
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
+            padding: 0.75rem 1.4rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .email-btn {
-            background: var(--light-bg-alt);
-            color: var(--text-dark);
+            background: rgba(255, 255, 255, 0.1);
+            color: #f8fbff;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            transition: all 0.25s ease;
         }
 
         .email-btn:hover {
-            background: var(--border-light);
+            background: rgba(255, 255, 255, 0.16);
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px var(--shadow);
+            box-shadow: 0 10px 24px rgba(8, 22, 45, 0.12);
         }
 
         .whatsapp-btn {
-            background: var(--success);
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
             color: white;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(31, 119, 180, 0.22);
         }
 
         .whatsapp-btn:hover {
-            background: var(--success-light);
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(40, 167, 69, 0.3);
+            box-shadow: 0 12px 28px rgba(31, 119, 180, 0.3);
         }
 
         .nav-toggle {
             display: none;
             background: none;
             border: none;
-            color: var(--text-dark);
+            color: #ffffff;
             font-size: 1.5rem;
             cursor: pointer;
         }
@@ -183,11 +184,11 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--light-bg-alt) 100%);
-            color: var(--text-dark);
+            background: linear-gradient(135deg, #071827 0%, #0c2942 60%, #1c4b75 100%);
+            color: #f8fbff;
             padding: 6rem 2rem;
             text-align: center;
-            min-height: 650px;
+            min-height: 680px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -200,9 +201,9 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(108, 117, 125, 0.1) 0%, transparent 70%);
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, rgba(79, 136, 200, 0.16) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -231,15 +232,39 @@
             text-shadow: none;
         }
 
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #d6e4ff;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            text-shadow: 0 18px 50px rgba(5, 27, 65, 0.15);
+        }
+
         .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--text-gray-light);
+            font-size: 1.35rem;
+            color: rgba(242, 248, 255, 0.84);
             margin-bottom: 2.5rem;
-            font-weight: 300;
+            font-weight: 400;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .hero-cta {
@@ -251,34 +276,35 @@
         }
 
         .btn {
-            padding: 1.2rem 2.5rem;
+            padding: 1.1rem 2.2rem;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
             cursor: pointer;
             border: none;
-            font-size: 1.1rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px var(--shadow);
+            font-size: 1.05rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.4px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             color: white;
+            box-shadow: 0 16px 35px rgba(31, 119, 180, 0.2);
         }
 
         .btn-primary:hover {
             background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(197, 48, 48, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px rgba(31, 119, 180, 0.24);
         }
 
         .btn-secondary {
-            background: var(--light-bg-alt);
-            color: var(--text-dark);
-            border: 2px solid var(--border);
-            backdrop-filter: none;
+            background: rgba(255, 255, 255, 0.12);
+            color: #f8fbff;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
         }
 
         .btn-secondary:hover {
@@ -295,29 +321,29 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.85rem;
             color: var(--text-dark);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             font-weight: 800;
             letter-spacing: -0.5px;
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
         .section-subtitle {
             text-align: center;
             color: var(--text-gray);
-            margin-bottom: 3.5rem;
-            font-size: 1.2rem;
-            max-width: 700px;
+            margin-bottom: 3rem;
+            font-size: 1.15rem;
+            max-width: 720px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
+            line-height: 1.7;
             font-weight: 400;
         }
 
         /* Problemas Section */
         .problemas {
-            background: var(--light-bg);
+            background: #ffffff;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
@@ -330,42 +356,36 @@
         }
 
         .problema-card {
-            background: var(--light-bg-alt);
-            padding: 2.5rem;
-            border-radius: 12px;
+            background: #ffffff;
+            padding: 2.3rem;
+            border-radius: 20px;
             border-left: 4px solid var(--accent);
-            box-shadow: 0 4px 20px var(--shadow-light);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(15, 23, 42, 0.08);
         }
 
         .problema-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 40px var(--shadow);
+            box-shadow: 0 22px 55px rgba(15, 23, 42, 0.14);
             border-color: var(--accent);
         }
 
         .problema-card h3 {
             color: var(--text-dark);
             margin-bottom: 1.2rem;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
         }
 
         .problema-card p {
             color: var(--text-gray);
-            line-height: 1.7;
-        }
-        }
-
-        .problema-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         /* Servicios Section */
         .servicios {
-            background: var(--primary-dark);
+            background: var(--light-bg);
             color: var(--text-dark);
         }
 
@@ -377,15 +397,15 @@
         }
 
         .servicio-card {
-            background: var(--light-bg-alt);
-            border: 1px solid var(--border);
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.08);
             padding: 3rem 2.5rem;
-            border-radius: 16px;
+            border-radius: 24px;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px var(--shadow-light);
+            box-shadow: 0 22px 60px rgba(15, 23, 42, 0.06);
         }
 
         .servicio-card::before {
@@ -394,7 +414,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 6px;
             background: linear-gradient(90deg, var(--secondary), var(--accent));
             transform: scaleX(0);
             transform-origin: left;
@@ -407,14 +427,14 @@
 
         .servicio-card:hover {
             border-color: var(--secondary);
-            box-shadow: 0 12px 40px var(--shadow);
+            box-shadow: 0 25px 70px rgba(15, 23, 42, 0.16);
             transform: translateY(-8px);
         }
 
         .servicio-icon {
-            font-size: 4rem;
+            font-size: 3.7rem;
             margin-bottom: 1.5rem;
-            opacity: 0.8;
+            opacity: 0.95;
         }
 
         .servicio-card h3 {
@@ -503,18 +523,18 @@
 
         /* Formulario */
         .formulario-section {
-            background: var(--primary-dark);
+            background: #f7fbff;
             color: var(--text-dark);
         }
 
         .form-container {
-            max-width: 550px;
+            max-width: 580px;
             margin: 0 auto;
-            background: var(--light-bg-alt);
-            padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            box-shadow: 0 8px 30px var(--shadow);
+            background: #ffffff;
+            padding: 3.2rem;
+            border-radius: 26px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
         }
 
         .form-group {
@@ -547,7 +567,7 @@
             outline: none;
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
-            background: var(--text-dark);
+            background: #edf6ff;
         }
 
         .form-group textarea {
@@ -661,8 +681,8 @@
 
         /* Footer */
         footer {
-            background: var(--primary-dark);
-            color: var(--text-dark);
+            background: #071827;
+            color: rgba(255, 255, 255, 0.9);
             padding: 4rem 2rem 2rem;
             text-align: center;
             position: relative;
@@ -691,21 +711,17 @@
         }
 
         .footer-section a {
-            color: var(--text-gray);
+            color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             display: block;
             margin-bottom: 0.8rem;
-            transition: all 0.3s;
+            transition: all 0.25s ease;
             font-size: 1rem;
         }
 
         .footer-section a:hover {
-            color: var(--text-dark);
-            transform: translateX(5px);
-        }
-
-        .footer-section a:hover {
-            color: white;
+            color: #ffffff;
+            transform: translateX(4px);
         }
 
         .footer-contact {
@@ -933,7 +949,7 @@
                 <a href="https://wa.me/593992217314?text=Hola%20AGNEXUS!%20Quiero%20agendar%20una%20consulta"
                     target="_blank" class="btn btn-secondary">Hablar con un Experto</a>
             </div>
-            <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 2rem;">📞 +593 99 221 7314 | 📧
+            <p style="font-size: 0.95rem; color: rgba(242, 248, 255, 0.78); margin-top: 2rem;">📞 +593 99 221 7314 | 📧
                 contacto@agnexusuio.com</p>
         </div>
     </section>
