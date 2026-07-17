@@ -1,46 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
   <title id="title">Telefonia IP empresarial</title>
-  <desc id="desc">Ilustracion corporativa premium de comunicaciones y central telefonica IP.</desc>
+  <desc id="desc">Ilustracion explicita de central PBX IP, extensiones SIP, cola de llamadas e IVR.</desc>
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#111827"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1f2937"/>
     </linearGradient>
-    <linearGradient id="panel2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f3f4f6"/>
-      <stop offset="100%" stop-color="#d1d5db"/>
-    </linearGradient>
-    <linearGradient id="green2" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#10b981"/>
       <stop offset="100%" stop-color="#6ee7b7"/>
     </linearGradient>
   </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
 
-  <rect width="1600" height="900" fill="url(#bg2)"/>
-
-  <g opacity="0.18" stroke="#94a3b8" fill="none">
-    <path d="M120 170 H1480"/>
-    <path d="M120 730 H1480"/>
-    <circle cx="240" cy="460" r="130"/>
-    <circle cx="1360" cy="460" r="130"/>
+  <g fill="#e5e7eb">
+    <rect x="640" y="290" width="320" height="180" rx="18"/>
+    <rect x="220" y="250" width="260" height="90" rx="14"/>
+    <rect x="220" y="560" width="260" height="90" rx="14"/>
+    <rect x="1120" y="250" width="260" height="90" rx="14"/>
+    <rect x="1120" y="560" width="260" height="90" rx="14"/>
+    <rect x="690" y="160" width="220" height="80" rx="14"/>
   </g>
 
-  <g transform="translate(430 190)">
-    <rect x="0" y="0" width="740" height="500" rx="34" fill="#182437" opacity="0.8"/>
-    <rect x="24" y="24" width="692" height="452" rx="26" fill="url(#panel2)"/>
-
-    <rect x="86" y="92" width="520" height="96" rx="16" fill="#c5ced8"/>
-    <rect x="86" y="230" width="160" height="70" rx="14" fill="#9aa7b5"/>
-    <rect x="266" y="230" width="160" height="70" rx="14" fill="#9aa7b5"/>
-    <rect x="446" y="230" width="160" height="70" rx="14" fill="#9aa7b5"/>
-
-    <g stroke="url(#green2)" stroke-width="8" fill="none" stroke-linecap="round">
-      <path d="M346 92 V38"/>
-      <circle cx="346" cy="24" r="14" fill="#10b981"/>
-      <path d="M-120 260 C 40 160, 120 160, 260 260"/>
-      <path d="M480 260 C 620 160, 700 160, 860 260"/>
-    </g>
+  <g fill="#0f172a" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" font-size="28" text-anchor="middle">
+    <text x="800" y="390">PBX IP</text>
+    <text x="350" y="305">EXT 101</text>
+    <text x="350" y="615">EXT 102</text>
+    <text x="1250" y="305">SOFTPHONE</text>
+    <text x="1250" y="615">TRONCAL SIP</text>
+    <text x="800" y="212">IVR / COLA</text>
   </g>
 
-  <text x="800" y="805" text-anchor="middle" fill="#e5e7eb" font-size="56" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">Telefonia IP / PBX</text>
+  <g stroke="url(#acc)" stroke-width="8" fill="none" stroke-linecap="round">
+    <line x1="800" y1="240" x2="800" y2="290"/>
+    <line x1="640" y1="380" x2="480" y2="295"/>
+    <line x1="640" y1="380" x2="480" y2="605"/>
+    <line x1="960" y1="380" x2="1120" y2="295"/>
+    <line x1="960" y1="380" x2="1120" y2="605"/>
+  </g>
+
+  <text x="800" y="810" text-anchor="middle" fill="#e5e7eb" font-size="56" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800">Telefonia IP / PBX</text>
 </svg>
