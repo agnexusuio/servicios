@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Equipos empresariales</title>
+  <desc id="desc">Ilustracion corporativa premium de hardware y equipamiento tecnologico empresarial.</desc>
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="green6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg6)"/>
+
+  <g fill="#e5e7eb" opacity="0.96">
+    <rect x="220" y="240" width="450" height="330" rx="26"/>
+    <rect x="720" y="200" width="680" height="410" rx="26"/>
+    <rect x="280" y="620" width="1040" height="86" rx="20" fill="#d1d5db"/>
+  </g>
+
+  <g fill="#9ca3af">
+    <rect x="290" y="310" width="320" height="24" rx="7"/>
+    <rect x="290" y="354" width="240" height="24" rx="7"/>
+    <rect x="790" y="286" width="530" height="26" rx="8"/>
+    <rect x="790" y="338" width="440" height="26" rx="8"/>
+    <rect x="790" y="390" width="490" height="26" rx="8"/>
+  </g>
+
+  <g stroke="url(#green6)" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M400 520 H560"/>
+    <path d="M860 520 H1260"/>
+    <circle cx="630" cy="520" r="12" fill="#10b981"/>
+    <circle cx="780" cy="520" r="12" fill="#10b981"/>
+  </g>
+
+  <text x="800" y="805" text-anchor="middle" fill="#f3f4f6" font-size="56" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">Equipos Empresariales</text>
+</svg>
