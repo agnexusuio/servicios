@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#grad)"/>
+  <!-- Red de nodos -->
+  <circle cx="80" cy="60" r="20" fill="#ffffff" opacity="0.3"/>
+  <circle cx="200" cy="100" r="25" fill="#ffffff" opacity="0.5"/>
+  <circle cx="320" cy="60" r="20" fill="#ffffff" opacity="0.3"/>
+  <circle cx="140" cy="150" r="18" fill="#ffffff" opacity="0.3"/>
+  <circle cx="260" cy="150" r="18" fill="#ffffff" opacity="0.3"/>
+  <!-- Líneas de conexión -->
+  <line x1="80" y1="60" x2="200" y2="100" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <line x1="320" y1="60" x2="200" y2="100" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="100" x2="140" y2="150" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="100" x2="260" y2="150" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <!-- Iconos -->
+  <text x="80" y="65" font-size="20" text-anchor="middle" fill="#ffffff">📡</text>
+  <text x="200" y="108" font-size="24" text-anchor="middle" fill="#ffffff">🌐</text>
+  <text x="320" y="65" font-size="20" text-anchor="middle" fill="#ffffff">💻</text>
+</svg>
