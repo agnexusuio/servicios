@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0369a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#075985;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#grad)"/>
+  <!-- Señales WiFi -->
+  <path d="M 200 150 Q 185 135 170 120" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 200 140 Q 175 115 150 90" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 200 130 Q 165 95 130 60" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Señales lado derecho -->
+  <path d="M 200 150 Q 215 135 230 120" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 200 140 Q 225 115 250 90" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 200 130 Q 235 95 270 60" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Centro del router -->
+  <circle cx="200" cy="160" r="12" fill="#ffffff" opacity="0.9"/>
+  <circle cx="200" cy="160" r="8" fill="url(#grad)"/>
+  <!-- Dispositivos conectados -->
+  <rect x="40" y="40" width="35" height="40" rx="4" fill="#ffffff" opacity="0.3"/>
+  <text x="57" y="68" font-size="20" text-anchor="middle" fill="#ffffff">📱</text>
+  <rect x="325" y="40" width="35" height="40" rx="4" fill="#ffffff" opacity="0.3"/>
+  <text x="342" y="68" font-size="20" text-anchor="middle" fill="#ffffff">💻</text>
+</svg>
