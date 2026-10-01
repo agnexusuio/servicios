@@ -5,7 +5,7 @@ Sitio web de alta conversión para AGNEXUSUIO, empresa especializada en solucion
 ## Características
 
 - **Diseño Profesional**: Tema oscuro con tonos azules, minimalista y moderno
-- **Multi-página**: Página principal + 5 páginas de servicios individuales
+- **Multi-página**: Página principal + páginas de servicios individuales
 - **Responsive**: Adaptado para móviles, tablets y escritorio
 - **CTA WhatsApp**: Botón flotante de WhatsApp en todas las páginas
 - **Formulario de Leads**: Con validación y mensajes de éxito
@@ -21,6 +21,7 @@ agnexus-landing/
 ├── redes.html          # Redes Empresariales
 ├── telefonia.html      # Telefonía IP / PBX
 ├── wifi.html           # WiFi Profesional
+├── starlink.html       # Internet Satelital Starlink
 ├── cableado.html       # Cableado Estructurado
 ├── iot.html            # Monitoreo IoT / LoRaWAN
 ├── cargadores.html     # Instalación de cargadores para autos eléctricos
@@ -36,10 +37,11 @@ agnexus-landing/
 1. **Redes Empresariales**: Infraestructura de red robusta y segura
 2. **Telefonía IP / PBX**: Sistemas de comunicación modernos
 3. **WiFi Profesional**: Cobertura de alta capacidad
-4. **Cableado Estructurado**: Instalación certificada
-5. **Monitoreo IoT / LoRaWAN**: Control operativo inteligente
-6. **Cargadores EV**: Diseño e instalación de estaciones de carga
-7. **Venta de Equipos**: Redirección a www.agnexusuio.store
+4. **Internet Satelital Starlink**: Conectividad satelital con velocidad pico de hasta 400 Mbps
+5. **Cableado Estructurado**: Instalación certificada
+6. **Monitoreo IoT / LoRaWAN**: Control operativo inteligente
+7. **Cargadores EV**: Diseño e instalación de estaciones de carga
+8. **Venta de Equipos**: Redirección a www.agnexusuio.store
 
 ## Información de Contacto
 
